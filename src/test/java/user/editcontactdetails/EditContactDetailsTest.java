@@ -2,7 +2,7 @@ package user.editcontactdetails;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
-import page.user.*;
+import pageobjectmodel.user.*;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;

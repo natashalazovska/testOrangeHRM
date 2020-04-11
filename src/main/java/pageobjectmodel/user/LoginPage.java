@@ -1,6 +1,6 @@
-package page.user;
+package pageobjectmodel.user;
 
-import page.adminhelper.Header;
+import pageobjectmodel.adminhelper.Header;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

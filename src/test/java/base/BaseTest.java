@@ -3,9 +3,7 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
-import page.user.LoginPage;
-
-import java.util.concurrent.TimeUnit;
+import pageobjectmodel.user.LoginPage;
 
 public class BaseTest {
     private static final String ORANGEHRMLIVE_URL = "https://opensource-demo.orangehrmlive.com/";

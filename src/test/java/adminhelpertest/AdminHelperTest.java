@@ -1,9 +1,9 @@
 package adminhelpertest;
 
-import page.adminhelper.AddUsers;
-import page.adminhelper.Admin;
-import page.adminhelper.EditUser;
-import page.adminhelper.Header;
+import pageobjectmodel.adminhelper.AddUsers;
+import pageobjectmodel.adminhelper.Admin;
+import pageobjectmodel.adminhelper.EditUser;
+import pageobjectmodel.adminhelper.Header;
 import base.BaseTest;
 import org.testng.annotations.Test;
 

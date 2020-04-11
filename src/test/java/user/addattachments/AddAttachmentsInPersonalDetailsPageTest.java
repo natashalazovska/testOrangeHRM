@@ -3,9 +3,9 @@ package user.addattachments;
 import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.user.Attachments;
-import page.user.Dashboard;
-import page.user.PersonalDetails;
+import pageobjectmodel.user.Attachments;
+import pageobjectmodel.user.Dashboard;
+import pageobjectmodel.user.PersonalDetails;
 
 import java.io.File;
 import java.net.URISyntaxException;

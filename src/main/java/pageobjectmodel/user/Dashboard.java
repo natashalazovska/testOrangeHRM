@@ -1,4 +1,4 @@
-package page.user;
+package pageobjectmodel.user;
 import org.openqa.selenium.WebDriver;
 
 public class Dashboard extends MyInfoBasePage {
