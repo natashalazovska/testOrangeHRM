@@ -1,4 +1,4 @@
-package pageobjectmodel.user.loginfunctionality;
+package pageobjectmodel.user.login;
 
 import pageobjectmodel.base.BaseTest;
 import org.testng.annotations.Test;
