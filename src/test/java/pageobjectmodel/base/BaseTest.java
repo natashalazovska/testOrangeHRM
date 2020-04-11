@@ -15,7 +15,6 @@ public class BaseTest {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
-    //    driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
     }
 
     @BeforeMethod
@@ -27,7 +26,7 @@ public class BaseTest {
 
    @AfterMethod
     public void logout() {
-        driver.get(LOGOUT_URL);  // pokazi mi kako go najde ova
+        driver.get(LOGOUT_URL);
     }
 
    @AfterClass
