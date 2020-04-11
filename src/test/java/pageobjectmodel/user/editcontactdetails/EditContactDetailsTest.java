@@ -1,6 +1,6 @@
-package user.editcontactdetails;
+package pageobjectmodel.user.editcontactdetails;
 
-import base.BaseTest;
+import pageobjectmodel.base.BaseTest;
 import org.testng.annotations.Test;
 import pageobjectmodel.user.*;
 

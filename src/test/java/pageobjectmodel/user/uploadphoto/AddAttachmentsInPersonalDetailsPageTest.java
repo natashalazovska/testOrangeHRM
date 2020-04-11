@@ -1,6 +1,6 @@
-package user.uploadphoto;
+package pageobjectmodel.user.uploadphoto;
 
-import base.BaseTest;
+import pageobjectmodel.base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobjectmodel.user.Dashboard;

@@ -1,6 +1,6 @@
-package user.addattachments;
+package pageobjectmodel.user.addattachments;
 
-import base.BaseTest;
+import pageobjectmodel.base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobjectmodel.user.Attachments;

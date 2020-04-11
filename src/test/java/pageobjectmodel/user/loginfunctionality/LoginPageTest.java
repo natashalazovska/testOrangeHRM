@@ -1,6 +1,6 @@
-package user.loginfunctionality;
+package pageobjectmodel.user.loginfunctionality;
 
-import base.BaseTest;
+import pageobjectmodel.base.BaseTest;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;

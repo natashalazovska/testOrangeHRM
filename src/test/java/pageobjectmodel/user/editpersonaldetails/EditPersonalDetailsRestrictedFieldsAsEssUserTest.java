@@ -1,6 +1,6 @@
-package user.editpersonaldetails;
+package pageobjectmodel.user.editpersonaldetails;
 
-import base.BaseTest;
+import pageobjectmodel.base.BaseTest;
 import org.testng.annotations.Test;
 import pageobjectmodel.user.Dashboard;
 import pageobjectmodel.user.PersonalDetails;
