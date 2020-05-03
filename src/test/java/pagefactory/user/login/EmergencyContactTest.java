@@ -10,6 +10,7 @@ public class EmergencyContactTest extends BaseTest {
 
     @Test
     public void assignedEmergencyContacts() {
+
         Dashboard dashboard = login.loginWithEssUser();
         PersonalDetails personalDetails = dashboard.clickMyInfo();
         EmergencyContact emergencyContact = personalDetails.navigateToEmergencyContact();
@@ -22,25 +23,18 @@ public class EmergencyContactTest extends BaseTest {
 
     @Test
     public void deleteAllEvenEmergencyContact() {
+
         Dashboard dashboard = login.loginWithEssUser();
         PersonalDetails personalDetails = dashboard.clickMyInfo();
         EmergencyContact emergencyContact = personalDetails.navigateToEmergencyContact();
-        for (int i = 0; i < 4; i++) {
-            emergencyContact.setAddContact();
-            emergencyContact.setContactName("linda");
-            emergencyContact.setRelationship("mam");
-            emergencyContact.setHomePhone(1234556);
-            emergencyContact.setSaveButton();
-        }
+
+        createEmergencyContacts(emergencyContact);
+
         emergencyContact.setSelectAllEvenContact();
         emergencyContact.deleteContact();
     }
 
-    @Test
-    public void deleteAllEmergencyContact() {
-        Dashboard dashboard = login.loginWithEssUser();
-        PersonalDetails personalDetails = dashboard.clickMyInfo();
-        EmergencyContact emergencyContact = personalDetails.navigateToEmergencyContact();
+    private void createEmergencyContacts(EmergencyContact emergencyContact) {
         for (int i = 0; i < 4; i++) {
             emergencyContact.setAddContact();
             emergencyContact.setContactName("linda");
@@ -48,6 +42,17 @@ public class EmergencyContactTest extends BaseTest {
             emergencyContact.setHomePhone(1234556);
             emergencyContact.setSaveButton();
         }
+    }
+
+    @Test
+    public void deleteAllEmergencyContact() {
+
+        Dashboard dashboard = login.loginWithEssUser();
+        PersonalDetails personalDetails = dashboard.clickMyInfo();
+        EmergencyContact emergencyContact = personalDetails.navigateToEmergencyContact();
+
+        createEmergencyContacts(emergencyContact);
+
         emergencyContact.selectAllContacts();
         emergencyContact.deleteContact();
     }
