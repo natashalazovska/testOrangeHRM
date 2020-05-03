@@ -4,13 +4,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import pageobjectmodel.adminhelper.Header;
-import pageobjectmodel.user.Dashboard;
-import pageobjectmodel.user.PersonalDetails;
 
 public class LoginPage {
-    public static final String ORANGEHRM_VIEW_MY_INFO = "https://opensource-demo.orangehrmlive.com/index.php/pim/viewMyDetails";
-    WebDriver driver;
+
+    private WebDriver driver;
 
     @FindBy(id = "txtUsername")
     private WebElement userName;
@@ -39,22 +36,6 @@ public class LoginPage {
         return new Dashboard(driver);
     }
 
-    public PersonalDetails clickMyInfoHeader() {
-        submitButton.click();
-        String actualUrl = driver.getCurrentUrl();
-        if (ORANGEHRM_VIEW_MY_INFO.contentEquals(actualUrl)) {
-            return new PersonalDetails(driver);
-        }
-        throw new IllegalStateException("User navigation not as expected.");
-    }
-
-    public Header loginWithAdmin() {
-        userName.sendKeys("admin");
-        password.sendKeys("admin123");
-        submitButton.click();
-        return new Header(driver);
-    }
-
     public Dashboard loginWithEssUser() {
         userName.sendKeys("linda.anderson");
         password.sendKeys("linda123");
@@ -65,6 +46,4 @@ public class LoginPage {
     public String getValidationText() {
         return status.getText();
     }
-
-
 }

@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import pagefactory.user.LoginPage;
 
 public class BaseTest {
+
     private static final String ORANGEHRMLIVE_URL = "https://opensource-demo.orangehrmlive.com/";
     private static final String LOGOUT_URL = "https://opensource-demo.orangehrmlive.com/index.php/auth/logout";
     protected LoginPage login;
