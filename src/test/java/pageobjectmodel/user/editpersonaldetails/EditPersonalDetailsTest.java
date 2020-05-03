@@ -7,6 +7,7 @@ import pageobjectmodel.user.PersonalDetails;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
+
 public class EditPersonalDetailsTest extends BaseTest {
     @Test
     public void testEditPersonalDetailSuccessfully() {
@@ -21,7 +22,6 @@ public class EditPersonalDetailsTest extends BaseTest {
         personalDetails.chooseMaleFromGender();
         personalDetails.selectMaritalStatusFromDropDown("Single");
         personalDetails.selectNationalityFromDropDown("Zambian");
-        // i kalendar da se dodade
         personalDetails.clickSave();
         String message = "Successfully Saved";
 

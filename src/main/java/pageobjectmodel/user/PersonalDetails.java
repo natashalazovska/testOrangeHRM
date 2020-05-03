@@ -133,11 +133,6 @@ public class PersonalDetails extends MyInfoBasePage {
         return driver.findElement(successfullySavedMessage).getText();
     }
 
-    public String getSuccessfullyDeletedValidationMessage() {
-        return driver.findElement(successfullySavedMessage).getText();
-
-    }
-
     public Attachments getAttachmentSection() {
         return attachmentSection;
     }

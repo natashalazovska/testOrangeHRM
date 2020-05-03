@@ -21,7 +21,6 @@ public class ContactDetails extends MyInfoBasePage {
     private By workEmailInput = By.id("contact_emp_work_email");
     private By otherEmailInput = By.id("contact_emp_oth_email");
     private By stateProvinceInput = By.id("contact_state");
-    // validation Message
     private By homeTelephoneValidationMessage = By.cssSelector("span[for=\"contact_emp_hm_telephone\"]");
     private By mobileValidationMessage = By.cssSelector("span[for=\"contact_emp_mobile\"]");
     private By workTelephoneValidationMessage = By.cssSelector("span[for=\"contact_emp_work_telephone\"]");
