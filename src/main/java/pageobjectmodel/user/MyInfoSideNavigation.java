@@ -9,6 +9,7 @@ public class MyInfoSideNavigation {
 
     private By profilePicture = By.id("empPic");
     private By contactDetails = By.linkText("Contact Details");
+    private By emergencyContacts = By.linkText("Emergency Contacts");
 
     public MyInfoSideNavigation(WebDriver driver) {
         this.driver = driver;
@@ -29,4 +30,8 @@ public class MyInfoSideNavigation {
         return new ContactDetails(driver);
     }
 
+    public EmergencyContact navigateToEmergencyContact() {
+        driver.findElement(emergencyContacts).click();
+        return new EmergencyContact(driver);
+    }
 }

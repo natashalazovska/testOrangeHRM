@@ -9,7 +9,7 @@ import pagefactory.user.PersonalDetails;
 public class EmergencyContactTest extends BaseTest {
 
     @Test
-    public void assignedEmergencyContacts() {
+    public void assignEmergencyContact() {
 
         Dashboard dashboard = login.loginWithEssUser();
         PersonalDetails personalDetails = dashboard.clickMyInfo();
