@@ -24,12 +24,12 @@ public class BaseTest {
         login = new LoginPage(driver);
     }
 
-   @AfterMethod
+    @AfterMethod
     public void logout() {
         driver.get(LOGOUT_URL);
     }
 
-   @AfterClass
+    @AfterClass
     public void turnDown() {
         driver.quit();
     }
