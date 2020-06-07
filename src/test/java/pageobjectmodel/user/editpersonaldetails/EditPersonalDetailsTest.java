@@ -9,8 +9,10 @@ import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class EditPersonalDetailsTest extends BaseTest {
+
     @Test
     public void testEditPersonalDetailSuccessfully() {
+
         Dashboard dashboard = login.loginWithEssUser();
         PersonalDetails personalDetails = dashboard.getHeaderNavigation().clickMyInfo();
         personalDetails.clickEdit();
@@ -25,11 +27,12 @@ public class EditPersonalDetailsTest extends BaseTest {
         personalDetails.clickSave();
         String message = "Successfully Saved";
 
-        assertTrue(personalDetails.getSuccessfullySavedMessage().contains(message));
+        assertTrue(personalDetails.getSuccessfulSaveMessage().contains(message));
     }
 
     @Test
     public void testCheckIsNationalitySelected() {
+
         Dashboard dashboard = login.loginWithEssUser();
         PersonalDetails personalDetails = dashboard.getHeaderNavigation().clickMyInfo();
         personalDetails.clickEdit();
@@ -42,6 +45,7 @@ public class EditPersonalDetailsTest extends BaseTest {
 
     @Test
     public void testEditPersonalDetailsWithoutFirstName() {
+
         Dashboard dashboard = login.loginWithEssUser();
         PersonalDetails personalDetails = dashboard.getHeaderNavigation().clickMyInfo();
         personalDetails.clickEdit();
@@ -59,6 +63,7 @@ public class EditPersonalDetailsTest extends BaseTest {
 
     @Test
     public void testEditPersonalDetailsWithoutLastName() {
+
         Dashboard dashboard = login.loginWithEssUser();
         PersonalDetails personalDetails = dashboard.getHeaderNavigation().clickMyInfo();
         personalDetails.clickEdit();
@@ -76,6 +81,7 @@ public class EditPersonalDetailsTest extends BaseTest {
 
     @Test
     public void testCheckIfMaritalStatusCanBeChanged() {
+
         Dashboard dashboard = login.loginWithEssUser();
         PersonalDetails personalDetails = dashboard.getHeaderNavigation().clickMyInfo();
         personalDetails.clickEdit();

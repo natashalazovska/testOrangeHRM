@@ -1,10 +1,8 @@
 package pageobjectmodel.user;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
 import java.util.List;
 
 public class PersonalDetails extends MyInfoBasePage {
@@ -25,8 +23,13 @@ public class PersonalDetails extends MyInfoBasePage {
     private By firstNameValidationMessage = By.cssSelector("span[for=\"personal_txtEmpFirstName\"]");
     private By lastNameValidationMessage = By.cssSelector("span[for=\"personal_txtEmpLastName\"]");
     private By successfullySavedMessage = By.cssSelector("div.fadable");
+    private By dateValidationMessage = By.cssSelector("span[for=\"personal_txtLicExpDate\"]");
+    private By openCalendarButton = By.xpath("//*[@id=\"frmEmpPersonalDetails\"]/fieldset/ol[2]/li[4]/img");
+    private By calendar = By.id("ui-datepicker-div");
+    private By month = By.cssSelector(".ui-datepicker-month");
+    private By year = By.cssSelector(".ui-datepicker-year");
+    private By day = By.cssSelector(".ui-datepicker-calendar td");
     private Attachments attachmentSection;
-
 
     public PersonalDetails(WebDriver driver) {
         super(driver);
@@ -63,7 +66,7 @@ public class PersonalDetails extends MyInfoBasePage {
         driver.findElement(lastNameInput).sendKeys(setLastName);
     }
 
-    public void editOtherID( String idNumber) {
+    public void editOtherID(String idNumber) {
         driver.findElement(otherIdInput).clear();
         driver.findElement(otherIdInput).sendKeys(idNumber);
     }
@@ -129,12 +132,52 @@ public class PersonalDetails extends MyInfoBasePage {
 
     }
 
-    public String getSuccessfullySavedMessage() {
+    public String getSuccessfulSaveMessage() {
         return driver.findElement(successfullySavedMessage).getText();
     }
 
     public Attachments getAttachmentSection() {
         return attachmentSection;
+    }
+
+    public void enterDateForLicenseExpiryDateFromKeyboard(String date) {
+        driver.findElement(licenseExpiryDateInput).clear();
+        driver.findElement(licenseExpiryDateInput).sendKeys(date);
+    }
+
+    public void chooseMonth(String selectedMonth) {
+        Select select = new Select(driver.findElement(month));
+        select.selectByValue(selectedMonth);
+    }
+
+    public void chooseYear(String selectedYear) {
+        Select select = new Select(driver.findElement(year));
+        select.selectByValue(selectedYear);
+    }
+
+
+    public void chooseDay(String selectedDay) {
+        List<WebElement> days = driver.findElements(day);
+        for (WebElement cell : days) {
+
+            if (cell.getText().equals(selectedDay)) {
+                driver.findElement(By.linkText(selectedDay)).click();
+            }
+        }
+    }
+
+    public void openCalendar() {
+        if (!isCalendarOpen()) {
+            driver.findElement(openCalendarButton).click();
+        }
+    }
+
+    public boolean isCalendarOpen() {
+        return driver.findElement(calendar).isDisplayed();
+    }
+
+    public String getDateValidationMessage() {
+        return driver.findElement(dateValidationMessage).getText();
     }
 
 }
